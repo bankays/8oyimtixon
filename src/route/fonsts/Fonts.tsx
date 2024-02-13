@@ -29,7 +29,7 @@ const Font = ({ modal2 }: { modal2: boolean }) => {
   const dispatch = useDispatch();
   useSelector((state: RootState) => console.log(state.addToFonts.cart));
 
-  const handleGetOnlyOneFont = (product: Fonts) => {
+  const handleGetOnlyOneFont = (product: any) => {
     dispatch(addToFonts2(product));
   };
   // const handleDeleteOne = (product: Fonts) => {
@@ -97,7 +97,7 @@ const Font = ({ modal2 }: { modal2: boolean }) => {
               className="font_div"
               style={{ width: modal2 ? "79%" : "97%" }}
             >
-              {product.variants.map((variant: string, index2) => (
+              {product.variants.map((variant, index2) => (
                 <p key={index2}>
                   {variant}
                   {text.length > 0 ? (

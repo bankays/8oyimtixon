@@ -21,7 +21,9 @@ const addToFonts = createSlice({
 
     removeAllCart: (state, action) => {
       state.cart = [];
+
       localStorage.setItem("cart", JSON.stringify(state.cart));
+      action.payload = 0;
     },
     removeOnlyOneCart: (state, action) => {
       state.cart = state.cart.filter(

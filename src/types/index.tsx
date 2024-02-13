@@ -1,7 +1,8 @@
 export type Fonts = {
   family: string;
   variants: string[];
-  subsets: string[];
+  variant: number;
+
   version: string;
   lastModified: string;
   files: {
