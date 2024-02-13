@@ -40,6 +40,9 @@ const Nav = ({
 
   const handleDeleteOne = (product: any) => {
     dispatch(removeOnlyOneCart(product));
+    copyText;
+    copyText2;
+    copyText3;
   };
   const handleDeleteall = () => {
     dispatch(removeAllCart(1));

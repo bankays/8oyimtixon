@@ -3,10 +3,7 @@ import { useParams } from "react-router-dom";
 import "./Fonts.css";
 import { Fonts } from "../../types";
 import { RootState } from "../../context/store/inedx";
-import {
-  addToFonts2,
-  removeOnlyOneCart,
-} from "../../context/features/AddToFonts";
+import { addToFonts2 } from "../../context/features/AddToFonts";
 import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
@@ -35,9 +32,9 @@ const Font = ({ modal2 }: { modal2: boolean }) => {
   const handleGetOnlyOneFont = (product: Fonts) => {
     dispatch(addToFonts2(product));
   };
-  const handleDeleteOne = (product: Fonts) => {
-    dispatch(removeOnlyOneCart(product));
-  };
+  // const handleDeleteOne = (product: Fonts) => {
+  //   dispatch(removeOnlyOneCart(product));
+  // };
   useEffect(() => {
     fetch(
       `https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDqGHQrGgS20hqJlzVJ6gHIy1QtsnxU3OQ`

@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Home.css";
 import { Fonts } from "../../types";
 import { Link } from "react-router-dom";
@@ -41,6 +41,7 @@ const Home = ({
     setCategory("");
     setCategory2("");
     setMaxOfstyles(1);
+    category2;
   };
 
   const togleModal = () => {
